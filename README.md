@@ -1,4 +1,4 @@
-# HTEpubReadr
+# HTePubReadr
 ePub reader and parser library for android
 
 [![](https://jitpack.io/v/HamedTaherpour/ht-epub-readr.svg)](https://jitpack.io/#HamedTaherpour/ht-epub-readr)
