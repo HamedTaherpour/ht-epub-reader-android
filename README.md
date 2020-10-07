@@ -13,7 +13,7 @@ ePub reader and parser library for android
 * [Example project](https://github.com/HamedTaherpour/ht-epub-readr/tree/master/app)
 
 ## Build
-* Step 1. Add the JitPack repository to your build file
+* step 1. Add the JitPack repository to your build file
 ```build
 allprojects {
     repositories {
@@ -21,7 +21,7 @@ allprojects {
     }
 }
 ```
-* Step 2. Add the dependency
+* step 2. Add the dependency
 ```build
 dependencies {
     implementation 'com.github.HamedTaherpour:ht-epub-readr:0.0.1'
@@ -30,13 +30,13 @@ dependencies {
 
 ## Usage
 ### Manifest
-* Step 1. Add permission your manifest file
+* step 1. Add permission your manifest file
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 ### Layout.xml
-* Step 2. Add `EpubView` to xml code
+* step 2. Add `EpubView` to xml code
 ```layout
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -54,7 +54,7 @@ dependencies {
 </androidx.cardview.widget.CardView>
 ```
 ### Java
-* Step 3. Create `EpubReaderComponent` and fetch ePub data
+* step 3. Create `EpubReaderComponent` and fetch ePub data
 ```java
 try {
     EpubReaderComponent epubReader = new EpubReaderComponent(filePath);
@@ -64,23 +64,23 @@ try {
 }
 ```
 ### BookEntity
-* Get all page path
+* get all page path
 ```java
 List<String> allPage = bookEntity.getPagePathList();
 ```
-* Get book name
+* get book name
 ```java
 String bookName = bookEntity.getName();
 ```
-* Get author name
+* get author name
 ```java
 String authorName = bookEntity.getAuthor();
 ```
-* Get over image
+* get over image
 ```java
 String coverImage = bookEntity.getCoverImage();
 ```
-* Get Sub Book Href (path from local file)
+* get Sub Book Href (path from local file)
 ```java
 List<SubBookEntity> allPage = bookEntity.getSubBookHref();
 ```
@@ -91,16 +91,16 @@ epubView.setBaseUrl(epubReader.getAbsolutePath());
 epubView.setPathPage(allPage.get(0));
 epubView.setUp();
 ```
-* Set font
+* set font [see sample css file](https://github.com/HamedTaherpour/sample-assets/blob/master/font/Acme.css)
 ```java
 FontEntity fontEntity = new FontEntity( url , name);
 epubView.setFont(fontEntity);
 ```
-* Set font size
+* set font size
 ```java
 epubView.setFontSize(15);
 ```
-* On hyper links click listener
+* on hyper links click listener
 ```java
 epubView.setOnHrefClickListener(new OnHrefClickListener() {
     @Override
