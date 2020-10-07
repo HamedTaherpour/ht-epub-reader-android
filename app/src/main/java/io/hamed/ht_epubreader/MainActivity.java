@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         setTitle(getString(R.string.app_name));
 
-        downloadFile("http://behnazmonfared.com/books/book-1.epub");
+        downloadFile("https://hamedtaherpour.github.io/sample-assets/epub/book-1.epub");
 
-        listFont.add(new FontEntity("https://4sat.4100sat.com/Content/css/font-style-IRANSans.css", "IRANSans"));
-        listFont.add(new FontEntity("https://4sat.4100sat.com/Content/css/font-style-Tahoma.css", "Tahoma"));
-        listFont.add(new FontEntity("https://4sat.4100sat.com/Content/css/font-style-Shabnam-FD.css", "Shabnam-FD"));
+        listFont.add(new FontEntity("https://hamedtaherpour.github.io/sample-assets/font/Acme.css", "Acme"));
+        listFont.add(new FontEntity("https://hamedtaherpour.github.io/sample-assets/font/IndieFlower.css", "IndieFlower"));
+        listFont.add(new FontEntity("https://hamedtaherpour.github.io/sample-assets/font/SansitaSwashed.css", "SansitaSwashed"));
     }
 
     @Override
