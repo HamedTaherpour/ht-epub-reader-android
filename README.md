@@ -7,7 +7,6 @@ ePub reader and parser library for android
 ## Demo
 <div style="dispaly:flex">
     <img src="/sample1.gif" width="24%">
-    <img src="/sample2.gif" width="24%">
 </div>
 
 * [Example project](https://github.com/HamedTaherpour/ht-epub-readr/tree/master/app)
