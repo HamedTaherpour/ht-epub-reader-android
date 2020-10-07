@@ -1,0 +1,3 @@
+include ':HTEpubReadr'
+include ':app'
+rootProject.name = "HT-EpubReader"
