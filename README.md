@@ -10,7 +10,7 @@ ePub reader and parser library for android
     <img src="/sample2.gif" width="24%">
 </div>
 
-##### Example project (https://github.com/HamedTaherpour/ht-epub-readr/tree/master/app)
+##### [Example project](https://github.com/HamedTaherpour/ht-epub-readr/tree/master/app)
 
 ## Build
 ##### Step 1. Add the JitPack repository to your build file
