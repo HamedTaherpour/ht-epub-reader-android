@@ -1,4 +1,4 @@
-# HTEpubReadr
+# HTePubReader
 ePub reader and parser library for android
 
 [![](https://jitpack.io/v/HamedTaherpour/ht-epub-readr.svg)](https://jitpack.io/#HamedTaherpour/ht-epub-readr)
@@ -99,7 +99,7 @@ set font size
 ```java
 epubView.setFontSize(15);
 ```
-on hyper links click listener
+on hyper link click listener
 ```java
 epubView.setOnHrefClickListener(new OnHrefClickListener() {
     @Override
