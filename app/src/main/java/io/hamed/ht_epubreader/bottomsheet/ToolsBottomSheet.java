@@ -23,7 +23,9 @@ import io.hamed.htepubreadr.entity.FontEntity;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 1/9/2020
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class ToolsBottomSheet extends BottomSheetDialogFragment {
 

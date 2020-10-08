@@ -13,7 +13,9 @@ import java.util.zip.ZipInputStream;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 5/30/2020.
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class ZipUtil {
     public static void unzip(File zipFile, File targetDirectory) throws IOException {

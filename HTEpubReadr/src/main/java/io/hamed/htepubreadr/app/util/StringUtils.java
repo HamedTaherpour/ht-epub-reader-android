@@ -1,5 +1,12 @@
 package io.hamed.htepubreadr.app.util;
 
+/**
+ * Author: Hamed Taherpour
+ * *
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
+ */
 public class StringUtils {
 
     public static String getBaseName(String filename) {

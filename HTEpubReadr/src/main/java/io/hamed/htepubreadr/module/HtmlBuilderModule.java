@@ -5,7 +5,9 @@ import io.hamed.htepubreadr.entity.HtmlBuilderEntity;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 10/5/2020
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class HtmlBuilderModule {
 

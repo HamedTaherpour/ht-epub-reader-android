@@ -15,6 +15,13 @@ import io.hamed.htepubreadr.entity.FontEntity;
 import io.hamed.htepubreadr.entity.HtmlBuilderEntity;
 import io.hamed.htepubreadr.util.EpubUtil;
 
+/**
+ * Author: Hamed Taherpour
+ * *
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
+ */
 public class EpubView extends WebView {
 
     private OnHrefClickListener onHrefClickListener;

@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
  * Author: Hamed Taherpour
  * *
  * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class MyRecycler extends RecyclerView {
 

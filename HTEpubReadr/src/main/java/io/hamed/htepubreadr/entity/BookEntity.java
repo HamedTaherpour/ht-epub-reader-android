@@ -7,9 +7,10 @@ import java.util.List;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 5/30/2020.
- */
-public class BookEntity {
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
+ */public class BookEntity {
 
     private String author;
     private String name;

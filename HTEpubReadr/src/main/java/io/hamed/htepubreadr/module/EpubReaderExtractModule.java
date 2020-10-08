@@ -17,7 +17,9 @@ import io.hamed.htepubreadr.entity.SubBookEntity;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 6/2/2020.
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class EpubReaderExtractModule {
 
@@ -48,7 +50,7 @@ public class EpubReaderExtractModule {
 
     public String fetchSubBookHref() {
         NodeList guide = rooElement.getElementsByTagName("guide");
-        if(guide.getLength() > 0){
+        if (guide.getLength() > 0) {
             Node rootNode = guide.item(0);
             NodeList nodeList = rootNode.getChildNodes();
             Node node = XmlUtil.getNodeOfAttributes(nodeList, "type", "toc");

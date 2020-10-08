@@ -6,6 +6,13 @@ import java.util.List;
 
 import io.hamed.htepubreadr.app.util.FileUtil;
 
+/**
+ * Author: Hamed Taherpour
+ * *
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
+ */
 public class EpubUtil {
 
     public static String getHtmlContent(String href) throws Exception {

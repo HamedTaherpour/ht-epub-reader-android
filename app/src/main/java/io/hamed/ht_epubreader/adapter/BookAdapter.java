@@ -17,6 +17,8 @@ import io.hamed.htepubreadr.ui.view.OnHrefClickListener;
  * Author: Hamed Taherpour
  * *
  * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> {
 

@@ -13,7 +13,9 @@ import io.hamed.htepubreadr.util.EpubUtil;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 5/30/2020.
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class EpubReaderComponent {
 

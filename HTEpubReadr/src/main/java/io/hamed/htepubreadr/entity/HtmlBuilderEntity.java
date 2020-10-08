@@ -3,7 +3,9 @@ package io.hamed.htepubreadr.entity;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 10/6/2020
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class HtmlBuilderEntity {
 

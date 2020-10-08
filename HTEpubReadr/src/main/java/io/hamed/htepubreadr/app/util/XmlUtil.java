@@ -14,7 +14,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 6/1/2020.
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class XmlUtil {
 

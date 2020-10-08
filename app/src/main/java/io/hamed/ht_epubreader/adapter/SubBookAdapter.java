@@ -17,7 +17,9 @@ import io.hamed.htepubreadr.entity.SubBookEntity;
 /**
  * Author: Hamed Taherpour
  * *
- * Created: 4/29/2020.
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
  */
 public class SubBookAdapter extends ListAdapter<SubBookEntity, SubBookAdapter.ViewHolder> {
 

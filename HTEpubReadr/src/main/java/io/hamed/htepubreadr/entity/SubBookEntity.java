@@ -1,5 +1,12 @@
 package io.hamed.htepubreadr.entity;
 
+/**
+ * Author: Hamed Taherpour
+ * *
+ * Created: 10/7/2020
+ * *
+ * Address: https://github.com/HamedTaherpour
+ */
 public class SubBookEntity {
 
     private String title;
