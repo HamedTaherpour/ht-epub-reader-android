@@ -99,7 +99,7 @@ set font size
 ```java
 epubView.setFontSize(15);
 ```
-on hyper links click listener
+on hyper link click listener
 ```java
 epubView.setOnHrefClickListener(new OnHrefClickListener() {
     @Override
