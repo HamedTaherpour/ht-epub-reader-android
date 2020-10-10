@@ -13,7 +13,6 @@ import android.webkit.WebViewClient;
 import io.hamed.htepubreadr.module.HtmlBuilderModule;
 import io.hamed.htepubreadr.entity.FontEntity;
 import io.hamed.htepubreadr.entity.HtmlBuilderEntity;
-import io.hamed.htepubreadr.util.EpubUtil;
 
 /**
  * Author: Hamed Taherpour
@@ -28,7 +27,7 @@ public class EpubView extends WebView {
     private String baseUrl;
     private int fontSize;
     private FontEntity fontEntity;
-    private String content;
+    private String htmlContent;
 
     public EpubView(Context context) {
         super(context);
@@ -59,12 +58,12 @@ public class EpubView extends WebView {
         this.baseUrl = baseUrl;
     }
 
-    public String getContent() {
-        return content;
+    public String getHtmlContent() {
+        return htmlContent;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setHtmlContent(String htmlContent) {
+        this.htmlContent = htmlContent;
     }
 
     public void setFontDefaultSize(int size) {
@@ -131,9 +130,9 @@ public class EpubView extends WebView {
 
         String html;
         if (getFont() != null)
-            html = generateHtmlContent(getContent(), getFont().getUrl());
+            html = generateHtmlContent(getHtmlContent(), getFont().getUrl());
         else
-            html = generateHtmlContent(getContent());
+            html = generateHtmlContent(getHtmlContent());
 
         loadDataWithBaseURL(getBaseUrl(), html, "text/html", "UTF-8", null);
     }

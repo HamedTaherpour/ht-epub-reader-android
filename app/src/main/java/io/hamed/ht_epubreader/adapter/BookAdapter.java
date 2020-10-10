@@ -46,7 +46,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
             epubView.setBaseUrl(baseUrl);
             if (onHrefClickListener != null)
                 epubView.setOnHrefClickListener(onHrefClickListener);
-            epubView.setContent(content);
+            epubView.setHtmlContent(content);
             epubView.setUp();
         }
     }
