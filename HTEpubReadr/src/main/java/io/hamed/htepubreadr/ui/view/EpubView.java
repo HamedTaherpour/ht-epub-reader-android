@@ -28,7 +28,7 @@ public class EpubView extends WebView {
     private String baseUrl;
     private int fontSize;
     private FontEntity fontEntity;
-    private String pathPage;
+    private String content;
 
     public EpubView(Context context) {
         super(context);
@@ -59,12 +59,12 @@ public class EpubView extends WebView {
         this.baseUrl = baseUrl;
     }
 
-    public String getPathPage() {
-        return pathPage;
+    public String getContent() {
+        return content;
     }
 
-    public void setPathPage(String pathPage) {
-        this.pathPage = pathPage;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public void setFontDefaultSize(int size) {
@@ -131,21 +131,20 @@ public class EpubView extends WebView {
 
         String html;
         if (getFont() != null)
-            html = generateHtmlContent(getPathPage(), getFont().getUrl());
+            html = generateHtmlContent(getContent(), getFont().getUrl());
         else
-            html = generateHtmlContent(getPathPage());
+            html = generateHtmlContent(getContent());
 
         loadDataWithBaseURL(getBaseUrl(), html, "text/html", "UTF-8", null);
     }
 
-    private String generateHtmlContent(String htmlPage, String fontFamily) {
-        String htmlContent = "404";
+    private String generateHtmlContent(String htmlContent, String fontFamily) {
         try {
-            htmlContent = EpubUtil.getHtmlContent(htmlPage);
             htmlContent = htmlContent.replaceAll("src=\"../", "src=\"" + getBaseUrl() + "");
             htmlContent = htmlContent.replaceAll("href=\"../", "href=\"" + getBaseUrl() + "");
         } catch (Exception e) {
             e.printStackTrace();
+            htmlContent = "404";
         }
         HtmlBuilderModule htmlBuilderModule = new HtmlBuilderModule();
         HtmlBuilderEntity entity = new HtmlBuilderEntity(
