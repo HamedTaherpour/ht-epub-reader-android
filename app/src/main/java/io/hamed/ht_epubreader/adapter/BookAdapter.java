@@ -12,6 +12,7 @@ import io.hamed.ht_epubreader.R;
 import io.hamed.htepubreadr.entity.FontEntity;
 import io.hamed.htepubreadr.ui.view.EpubView;
 import io.hamed.htepubreadr.ui.view.OnHrefClickListener;
+import io.hamed.htepubreadr.util.EpubUtil;
 
 /**
  * Author: Hamed Taherpour
@@ -45,7 +46,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
             epubView.setBaseUrl(baseUrl);
             if (onHrefClickListener != null)
                 epubView.setOnHrefClickListener(onHrefClickListener);
-            epubView.setPathPage(content);
+            epubView.setContent(content);
             epubView.setUp();
         }
     }
@@ -63,7 +64,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.bind(data.get(position));
+        String content = "Error";
+        try {
+            content = EpubUtil.getHtmlContent(data.get(position));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        holder.bind(content);
     }
 
     @Override
