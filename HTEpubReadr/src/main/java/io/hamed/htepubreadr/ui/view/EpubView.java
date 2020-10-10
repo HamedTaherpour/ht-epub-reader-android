@@ -101,7 +101,7 @@ public class EpubView extends WebView {
         setWebChromeClient(new WebChromeClient() {
             @Override
             public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
-                Log.i("@MY_APP", "onConsoleMessage: " + consoleMessage.message());
+                Log.i("EPUB_VIEW", "onConsoleMessage: " + consoleMessage.message());
                 return super.onConsoleMessage(consoleMessage);
             }
         });
