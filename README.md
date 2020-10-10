@@ -23,7 +23,7 @@ allprojects {
 step 2. Add the dependency
 ```build
 dependencies {
-    implementation 'com.github.HamedTaherpour:ht-epub-reader-android:0.0.2'
+    implementation 'com.github.HamedTaherpour:ht-epub-reader-android:0.0.3'
 }
 ```
 
