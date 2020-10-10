@@ -83,11 +83,12 @@ get Sub Book Href (path from local file)
 ```java
 List<SubBookEntity> allPage = bookEntity.getSubBookHref();
 ```
-SetUp EpubView
+setUp EpubView
 ```java
 // set file path
 epubView.setBaseUrl(epubReader.getAbsolutePath());
-epubView.setPathPage(allPage.get(0));
+String content = EpubUtil.getHtmlContent(allPage.get(position));
+epubView.setHtmlContent(content);
 epubView.setUp();
 ```
 set font [see sample css file](https://github.com/HamedTaherpour/sample-assets/blob/master/font/Acme.css)
