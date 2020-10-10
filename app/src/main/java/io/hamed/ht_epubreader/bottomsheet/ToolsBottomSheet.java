@@ -54,18 +54,6 @@ public class ToolsBottomSheet extends BottomSheetDialogFragment {
         return view;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-//        ((View) getView().getParent()).setBackgroundColor(Color.TRANSPARENT);
-    }
-
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        dismissAllowingStateLoss();
-        super.onSaveInstanceState(outState);
-    }
-
     public void setOnChangeFontSize(OnChangeFontSize onChangeFontSize) {
         this.onChangeFontSize = onChangeFontSize;
     }
