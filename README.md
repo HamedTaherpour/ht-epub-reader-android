@@ -93,7 +93,7 @@ epubView.setUp();
 ```
 set font [see sample css file](https://github.com/HamedTaherpour/sample-assets/blob/master/font/Acme.css)
 ```java
-FontEntity fontEntity = new FontEntity( url , name);
+FontEntity fontEntity = new FontEntity(url,name);
 epubView.setFont(fontEntity);
 ```
 set font size
