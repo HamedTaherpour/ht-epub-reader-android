@@ -99,6 +99,7 @@ public class EpubView extends WebView {
         getSettings().setJavaScriptEnabled(true);
         getSettings().setDefaultTextEncodingName("utf-8");
         getSettings().setDomStorageEnabled(true);
+        getSettings().setAllowFileAccess(true);
     }
 
     private void showLogs() {
