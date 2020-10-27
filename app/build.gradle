@@ -34,5 +34,5 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.2.1'
     // Android Asynchronous Networking and Image Loading
-    implementation 'com.koushikdutta.ion:ion:3.0.8'
+    implementation 'com.koushikdutta.ion:ion:3.0.9'
 }
