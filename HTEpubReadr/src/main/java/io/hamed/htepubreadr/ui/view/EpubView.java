@@ -23,11 +23,12 @@ import io.hamed.htepubreadr.entity.HtmlBuilderEntity;
  */
 public class EpubView extends WebView {
 
+    public static final String TAG = "EPUB_VIEW";
+
     private OnHrefClickListener onHrefClickListener;
     private String baseUrl;
     private int fontSize;
     private FontEntity fontEntity;
-    private String htmlContent;
 
     public EpubView(Context context) {
         super(context);
@@ -58,14 +59,6 @@ public class EpubView extends WebView {
         this.baseUrl = baseUrl;
     }
 
-    public String getHtmlContent() {
-        return htmlContent;
-    }
-
-    public void setHtmlContent(String htmlContent) {
-        this.htmlContent = htmlContent;
-    }
-
     public void setFontDefaultSize(int size) {
         this.fontSize = size;
     }
@@ -88,11 +81,27 @@ public class EpubView extends WebView {
         return fontEntity;
     }
 
-    public void setUp() {
+    public void setUp(String content) {
+        setSetting();
+        showLogs();
+        setHyperLinkClickListener();
+
+        String html;
+        if (getFont() != null)
+            html = generateContent(content, getFont().getUrl());
+        else
+            html = generateContent(content);
+
+        loadDataWithBaseURL(getBaseUrl(), html, "text/html", "UTF-8", null);
+    }
+
+    private void setSetting() {
         getSettings().setJavaScriptEnabled(true);
         getSettings().setDefaultTextEncodingName("utf-8");
         getSettings().setDomStorageEnabled(true);
+    }
 
+    private void showLogs() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             setWebContentsDebuggingEnabled(true);
         }
@@ -100,11 +109,13 @@ public class EpubView extends WebView {
         setWebChromeClient(new WebChromeClient() {
             @Override
             public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
-                Log.i("EPUB_VIEW", "onConsoleMessage: " + consoleMessage.message());
+                Log.i(TAG, "onConsoleMessage: " + consoleMessage.message());
                 return super.onConsoleMessage(consoleMessage);
             }
         });
+    }
 
+    private void setHyperLinkClickListener() {
         setWebViewClient(new WebViewClient() {
 
             @Override
@@ -127,34 +138,31 @@ public class EpubView extends WebView {
             }
 
         });
-
-        String html;
-        if (getFont() != null)
-            html = generateHtmlContent(getHtmlContent(), getFont().getUrl());
-        else
-            html = generateHtmlContent(getHtmlContent());
-
-        loadDataWithBaseURL(getBaseUrl(), html, "text/html", "UTF-8", null);
     }
 
-    private String generateHtmlContent(String htmlContent, String fontFamily) {
+    private String generateContent(String content, String fontFamily) {
         try {
-            htmlContent = htmlContent.replaceAll("src=\"../", "src=\"" + getBaseUrl() + "");
-            htmlContent = htmlContent.replaceAll("href=\"../", "href=\"" + getBaseUrl() + "");
+            content = getContentWithoutBugs(content);
         } catch (Exception e) {
             e.printStackTrace();
-            htmlContent = "404";
+            content = "404";
         }
         HtmlBuilderModule htmlBuilderModule = new HtmlBuilderModule();
         HtmlBuilderEntity entity = new HtmlBuilderEntity(
                 "img{display: inline; height: auto; max-width: 100%;}",
                 fontFamily,
-                htmlContent
+                content
         );
         return htmlBuilderModule.getBaseContent(entity);
     }
 
-    private String generateHtmlContent(String htmlPage) {
-        return generateHtmlContent(htmlPage, "");
+    private String getContentWithoutBugs(String content) throws Exception {
+        content = content.replaceAll("src=\"../", "src=\"" + getBaseUrl() + "");
+        content = content.replaceAll("href=\"../", "href=\"" + getBaseUrl() + "");
+        return content;
+    }
+
+    private String generateContent(String htmlPage) {
+        return generateContent(htmlPage, "");
     }
 }
