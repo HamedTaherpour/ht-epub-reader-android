@@ -5,6 +5,8 @@ ePub reader and parser library for android
 
 
 ## Demo
+![FL Chart Logo](https://raw.githubusercontent.com/HamedTaherpour/ht-epub-reader-android/master/sample1.gif)
+
 <div style="dispaly:flex">
      <img src="https://raw.githubusercontent.com/HamedTaherpour/ht-epub-reader-android/master/sample1.gif" width="24%"> 
 </div>
