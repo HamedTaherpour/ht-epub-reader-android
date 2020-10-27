@@ -1,3 +1,11 @@
+<div align="center">
+	<br>
+	<img src="https://raw.githubusercontent.com/soroushchehresa/awesome-coronavirus/master/awesome-coronavirus.png" width="450px">
+	<br>
+	<br>
+	<br>
+</div>
+
 # HTePubReader
 ePub reader and parser library for android
 
@@ -11,7 +19,7 @@ ePub reader and parser library for android
      <img src="https://raw.githubusercontent.com/HamedTaherpour/ht-epub-reader-android/master/sample1.gif" width="24%"> 
 </div>
 
-##### [Example project](https://github.com/HamedTaherpour/ht-epub-readr/tree/master/app)
+##### [Example project](https://github.com/HamedTaherpour/ht-epub-reader-android/tree/master/app)
 
 ## Build
 step 1. Add the JitPack repository to your build file
