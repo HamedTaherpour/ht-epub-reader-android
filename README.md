@@ -87,8 +87,7 @@ setUp EpubView
 // set file path
 epubView.setBaseUrl(epubReader.getAbsolutePath());
 String content = EpubUtil.getHtmlContent(allPage.get(position));
-epubView.setHtmlContent(content);
-epubView.setUp();
+epubView.setUp(content);
 ```
 set font [see sample css file](https://github.com/HamedTaherpour/sample-assets/blob/master/font/Acme.css)
 ```java
