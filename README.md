@@ -74,7 +74,7 @@ get author name
 ```java
 String authorName = bookEntity.getAuthor();
 ```
-get over image
+get Cover image
 ```java
 String coverImage = bookEntity.getCoverImage();
 ```
