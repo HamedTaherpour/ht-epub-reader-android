@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         setTitle(getString(R.string.app_name));
 
-        downloadFile("https://hamedtaherpour.github.io/sample-assets/epub/book-1.epub");
+        downloadFile("https://hamedtaherpour.github.io/sample-assets/epub/book-8.epub");
 
         listFont.add(new FontEntity("https://hamedtaherpour.github.io/sample-assets/font/Acme.css", "Acme"));
         listFont.add(new FontEntity("https://hamedtaherpour.github.io/sample-assets/font/IndieFlower.css", "IndieFlower"));
@@ -154,7 +154,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setUpBookInfo(String name, String author, String filePathImgCover) {
         tvBookName.setText(name);
         tvBookAuthor.setText(author);
-        ivBook.setImageBitmap(fileToBitmap(new File(filePathImgCover)));
+        if (filePathImgCover != null)
+            ivBook.setImageBitmap(fileToBitmap(new File(filePathImgCover)));
     }
 
     private void setUpBookSubList(List<SubBookEntity> list) {
