@@ -20,11 +20,11 @@ import io.hamed.htepubreadr.app.util.ZipUtil;
 public class EpubReaderFileModule {
 
     private static final String META_INF_DIRECTORY = "META-INF/";
-    private static final String CONTENT_DIRECTORY = "OEBPS/";
     private static final String CONTAINER_XML_FILE = "container.xml";
     private static final String CACHE_DIRECTORY = "book/";
     private String epubFilePath;
     private String unzipFilePath;
+    private String otpFile;
 
     public EpubReaderFileModule(String epubFilePath) {
         this.epubFilePath = epubFilePath;
@@ -36,6 +36,10 @@ public class EpubReaderFileModule {
         ZipUtil.unzip(new File(epubFilePath), targetDirectory);
     }
 
+    public void setOtpFile(String otpFile) {
+        this.otpFile = otpFile;
+    }
+
     public String getAbsolutePath() {
         return "file://" + getContentFolderPath();
     }
@@ -44,8 +48,8 @@ public class EpubReaderFileModule {
         return getContentFolderPath() + href;
     }
 
-    public String getOtpFilePath(String otpFilePath){
-        return getUnzipFolderPath() + otpFilePath;
+    public String getOtpFilePath() {
+        return getUnzipFolderPath() + otpFile;
     }
 
     public String getContainerFilePath() {
@@ -53,7 +57,7 @@ public class EpubReaderFileModule {
     }
 
     private String getContentFolderPath() {
-        return getUnzipFolderPath() + CONTENT_DIRECTORY;
+        return new File(getUnzipFolderPath() + otpFile).getParent() + "/";
     }
 
     private String getMetaInfoFolderPath() {

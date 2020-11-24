@@ -39,7 +39,8 @@ public class EpubReaderExtractModule {
 
     public void setUp(Context context) throws IOException {
         pathModule.setUp(context);
-        rooElement = XmlUtil.getRootElement(pathModule.getOtpFilePath(getOpfFilePath()));
+        pathModule.setOtpFile(getOpfFilePath());
+        rooElement = XmlUtil.getRootElement(pathModule.getOtpFilePath());
     }
 
     private String getOpfFilePath() {
